@@ -11,6 +11,7 @@ import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.appcompat.widget.AppCompatEditText
 @SuppressLint("CustomViewStyleable", "Recycle")
 class MyEditText(context: Context, attrs: AttributeSet?) :
@@ -78,8 +79,12 @@ class MyEditText(context: Context, attrs: AttributeSet?) :
         }
     }
 
-
-
+    fun setText(string: String) {
+        editText.setText(string,TextView.BufferType.EDITABLE)
+    }
+    fun getText():String{
+        return editText.text.toString()
+    }
 
 
 }
